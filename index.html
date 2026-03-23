@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun mechanics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      publicPath: "vendor/ruffle/"
+    };
+  </script>
+  <script src="vendor/ruffle/ruffle.js"></script>
+  <script src="vendor/djvu/djvu.js"></script>
+  <script src="vendor/djvu/djvu_viewer.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand-block">
+        <p class="brand-kicker">Digital archive</p>
+        <h1>Fun mechanics</h1>
+      </div>
+      <nav class="topbar__nav" aria-label="Primary">
+        <a href="#library">DjVu books</a>
+        <a href="#gallery">Interactive models</a>
+        <button class="button button--secondary" id="theme-toggle" type="button">Shift palette</button>
+      </nav>
+    </header>
+
+    <section class="masthead">
+      <div class="masthead__copy">
+        <p class="eyebrow">Interactive physical models</p>
+        <h2>A focused archive for reading theory and launching interactive mechanics demos.</h2>
+        <p class="intro">
+          The library below combines a local DjVu reading workspace with restored browser-based physical models powered by Ruffle.
+        </p>
+      </div>
+      <div class="masthead__panel">
+        <div class="metric">
+          <span class="metric__value" id="swf-count">17</span>
+          <span class="metric__label">interactive models</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value" id="djvu-count">0</span>
+          <span class="metric__label">DjVu books ready</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value">2</span>
+          <span class="metric__label">local viewers</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="library">
+      <div class="gallery__intro">
+        <p class="eyebrow">Library</p>
+        <h2>DjVu Books</h2>
+        <p class="section-copy">Reference material presented in a calm reading workspace.</p>
+      </div>
+      <div class="djvu-layout">
+        <aside class="djvu-list" id="djvu-library"></aside>
+        <div class="djvu-viewer-card">
+          <div class="djvu-viewer__meta">
+            <h3 id="djvu-title">No book selected</h3>
+            <p id="djvu-path">Choose a DjVu file to start reading.</p>
+          </div>
+          <div class="djvu-viewer" id="djvu-viewer"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="gallery__intro">
+        <p class="eyebrow">Archive</p>
+        <h2>Interactive physical models</h2>
+        <p class="section-copy">A browsable catalog of restored local simulations for modern browsers.</p>
+      </div>
+      <div class="swf-grid" id="swf-gallery"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
