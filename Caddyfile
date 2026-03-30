@@ -1,0 +1,8 @@
+{
+	auto_https disable_redirects
+}
+
+funmechanics.net:8443 {
+	root * /home/nikiigo/PyCharmMiscProject
+	file_server
+}
