@@ -6,5 +6,5 @@
 
 funmechanics.net:8443 {
 	root * /srv/funmechanics
-	file_server
+	file_server browse
 }
