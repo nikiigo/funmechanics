@@ -1,8 +1,10 @@
 {
-	auto_https disable_redirects
+	acme_dns route53 {
+		hosted_zone_id Z08479271XP3Y2S4Z33KH
+	}
 }
 
 funmechanics.net:8443 {
-	root * /home/nikiigo/PyCharmMiscProject
+	root * /srv/funmechanics
 	file_server
 }
